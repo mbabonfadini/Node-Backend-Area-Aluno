@@ -1,0 +1,32 @@
+{
+  "name": "areadoaluno",
+  "version": "1.0.0",
+  "description": "Carteirinha do estudante",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon ./swagger/autoGenDoc.js",
+    "autoDoc": "node ./swagger/autoGenDoc.js",
+    "start": "node ./index.js"
+  },
+  "keyword": [],
+  "author": "Marcos Bonfadini",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "mongoose-to-swagger": "^1.5.1",
+    "morgan": "^1.10.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
