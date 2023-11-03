@@ -14,23 +14,22 @@ async function authDocProducao(req, res, next) {
     res.status(401).set('Content-Type', 'text/html');
     res.send(Buffer.from(`
 
-        <!DOCTYPE html>
-<html>
-  <head>
-    <title>Página com Fundo Preto</title>
-  </head>
-  <body
-    style="
-      margin: 0;
-      background-color: #363062;
-      background-size: 100%;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    "
-  >
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Documentação Area do Aluno</title>
+    </head>
+    <body
+      style="
+        margin: 0;
+        background-color: #363062;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;"
+        >
     <form
       method="post"
       style="
@@ -42,9 +41,8 @@ async function authDocProducao(req, res, next) {
         height: 60vh;
         border-radius: 1.5rem;
         color: #fff;
-        background-color: #4D4C7D90;
-      "
-    >
+        background-color: #4D4C7D90;"
+      >
       <div style="text-align: center; display: flex; flex-direction:column; gap:5rem;">
         <h1>Faculdade do aluno</h1>
         <div
@@ -52,9 +50,8 @@ async function authDocProducao(req, res, next) {
             display: flex;
             border-radius: 3rem;
             border: 1px solid #000;
-            background-color: #00000050;
-          "
-        >
+            background-color: #00000050;"
+          >
           <input
             type="password"
             name="password"
@@ -102,23 +99,23 @@ async function authDocProducao(req, res, next) {
     // Usuario ainda não digitou a senha e está em modo produção
     res.status(200).set('Content-Type', 'text/html');
     res.send(Buffer.from(`
-        <!DOCTYPE html>
-<html>
-  <head>
-    <title>Página com Fundo Preto</title>
-  </head>
-  <body
-    style="
-      margin: 0;
-      background-color: #363062;
-      background-size: 100%;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    "
-  >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Documentação Area do Aluno</title>
+      </head>
+    <body
+      style="
+        margin: 0;
+        background-color: #363062;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
     <form
       method="post"
       style="

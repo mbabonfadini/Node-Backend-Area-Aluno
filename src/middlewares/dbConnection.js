@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const treatError = require('../functions/treatError.js');
-const { options } = require('../routes/typeUser.js');
 
 async function dbConnection(req, res, next) {
     try {
