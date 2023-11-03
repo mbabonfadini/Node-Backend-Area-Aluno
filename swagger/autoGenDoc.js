@@ -1,12 +1,14 @@
 const mongooseToSwagger = require('mongoose-to-swagger');
 const typeUserSchema = require('../src/models/TypeUser.js');
+const personSchema = require('../src/models/Person.js');
+const userSchema = require('../src/models/User.js');
 const swaggerAutogen = require('swagger-autogen')({
     openapi: '3.0.0',
     languague: 'pt-BR'
 })
 
 const outputFile = './swagger/swagger_output.json';
-const endpointFiles = ['../index.js', './src/router.js'];
+const endpointFiles = ['./index.js', './src/router.js'];
 
 let doc = {
     info: {
@@ -29,6 +31,8 @@ let doc = {
     components: {
         schemas: {
             typeUser: mongooseToSwagger(typeUserSchema),
+            person: mongooseToSwagger(personSchema),
+            user: mongooseToSwagger(userSchema)
         }
 
     }
