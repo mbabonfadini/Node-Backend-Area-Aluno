@@ -4,14 +4,14 @@ const treatError = require('../functions/treatError.js');
 async function dbConnection(req, res, next) {
     try {
         await
-            mongoose.connect(process.env.MONGODB_URI,{});
+            mongoose.connect(process.env.MONGODB_URI, {});
         try {
             next();
         }
         catch (error) {
             console.log({ error: error })
         }
-        
+
         return mongoose.connection;
     }
     catch (error) {
