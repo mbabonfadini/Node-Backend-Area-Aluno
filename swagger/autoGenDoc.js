@@ -8,7 +8,7 @@ const swaggerAutogen = require('swagger-autogen')({
 })
 
 const outputFile = './swagger/swagger_output.json';
-const endpointFiles = ['./index.js', './src/router.js'];
+const endpointsFiles = ['./index.js', './src/router.js'];
 
 let doc = {
     info: {
@@ -27,19 +27,19 @@ let doc = {
         }
     ],
     consumes: ['application/json'],
-    produce: ['application/json'],
+    produces: ['application/json'],
     components: {
         schemas: {
-            typeUser: mongooseToSwagger(typeUserSchema),
-            person: mongooseToSwagger(personSchema),
-            user: mongooseToSwagger(userSchema)
+            TypeUser: mongooseToSwagger(typeUserSchema),
+            Person: mongooseToSwagger(personSchema),
+            User: mongooseToSwagger(userSchema)
         }
 
     }
 
 }
 
-swaggerAutogen(outputFile,endpointFiles, doc).then(()=>{
+swaggerAutogen(outputFile,endpointsFiles, doc).then(()=>{
     console.log("Documentação do Swagger gerada encontra-se no arquivo em: "+ outputFile);
     if(process.env.NODE_ENV !== 'production'){
         require('../index.js')
