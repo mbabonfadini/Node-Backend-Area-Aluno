@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Baixando Artefato do código buildado
-        uses: actions/download-artifacts@v3
+        uses: actions/download-artifact@v3
         with:
           name: artefato
       
@@ -59,7 +59,7 @@ jobs:
         run: npm install --global vercel@latest
 
       - name: Buscando informações de ambiente no vercel
-        run: vercell pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
+        run: vercel pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
 
       - name: Buildando artefatos do projeto  
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
