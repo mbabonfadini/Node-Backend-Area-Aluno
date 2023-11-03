@@ -19,6 +19,10 @@ let doc = {
             url: 'http://localhost:4000',
             description: 'Servidor Localhost'
         },
+        {
+            url: 'https://area-aluno-app.vercel.app',
+            description: 'Produção'
+        }
     ],
     consumes: ['application/json'],
     produce: ['application/json'],
